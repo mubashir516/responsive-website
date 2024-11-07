@@ -78,6 +78,7 @@ nav {
 
 /* About Me Section */
 .about {
+    color:#f4f4f4;
     background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
     padding: 3rem 1rem;
     text-align: center;
@@ -140,20 +141,21 @@ nav {
 }
 
 /* Services Section */
+/* Services Section */
 .services {
     padding: 3rem 1rem;
     background-color: #f4f4f4;
     background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
     text-align: center;
 }
+
 .service-list {
-    display: flex; /* Using Flexbox for equal distribution */
-    justify-content: space-evenly; /* Distribute items evenly */
-    width: 100%; /* Ensure full width of the container */
-    gap: 10px; /* Space between the service items */
+    display: flex; /* Using Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between items */
     padding: 10px;
     text-align: center;
-
 }
 
 .service {
@@ -162,10 +164,9 @@ nav {
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    align-items: center ;
-    max-width: 350px;  /* Prevent overflowing */
-      
-
+    max-width: 300px; /* Set a max-width for consistency */
+    width: 100%; /* Ensure full width in small screens */
+    margin: 0 auto; /* Center the items */
 }
 
 .service img {
@@ -184,6 +185,7 @@ nav {
     font-size: 1rem;
     color: #555;
 }
+
 
 /* Contact Form Section */
 .contact {
@@ -266,6 +268,9 @@ footer {
         padding: 4rem 2rem;
     }
     .service-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
     footer {
@@ -369,6 +374,7 @@ footer {
         padding: 8px 16px;
         font-size: 1rem;
     }
+    
     .about, .services, .contact {
         padding: 2rem 1rem;
     }
