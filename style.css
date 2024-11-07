@@ -144,15 +144,16 @@ nav {
     padding: 3rem 1rem;
     background-color: #f4f4f4;
     background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
-
     text-align: center;
 }
-
 .service-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-    justify-items: center;
+    display: flex; /* Using Flexbox for equal distribution */
+    justify-content: space-evenly; /* Distribute items evenly */
+    width: 100%; /* Ensure full width of the container */
+    gap: 10px; /* Space between the service items */
+    padding: 10px;
+    text-align: center;
+
 }
 
 .service {
@@ -161,7 +162,10 @@ nav {
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    align-items: center ;
     max-width: 350px;  /* Prevent overflowing */
+      
+
 }
 
 .service img {
