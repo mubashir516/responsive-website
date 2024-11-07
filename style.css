@@ -1,0 +1,390 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background-color: #e64a19;
+    padding: 1rem 2rem 1rem 1rem;  /* Added right padding */
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('./images/download.jpeg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.get-started {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.get-started:hover {
+    background-color: #e64a19;
+}
+
+/* About Me Section */
+.about {
+    background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.profile-picture {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.circle-frame {
+    position: relative;
+    display: inline-block;
+    border: 5px solid #333;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    animation: rotate 4s linear infinite;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.contact-button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #e64a19;
+}
+
+/* Services Section */
+.services {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+    background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
+
+    text-align: center;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.service {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;  /* Prevent overflowing */
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Form Section */
+.contact {
+    color: #f4f4f4;
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #f4f4f4;
+    background: url('./images/Animation\ Gif.gif') no-repeat center center/cover;
+
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #e64a19;
+    color: #f4f4f4;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.send{
+    background-color: aqua !important;
+}
+
+/* General styles for mobile-first approach */
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .nav-links {
+        gap: 2rem;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero p {
+        font-size: 1.5rem;
+    }
+    .get-started {
+        font-size: 1.2rem;
+    }
+    .about, .services, .contact {
+        padding: 4rem 2rem;
+    }
+    .service-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    footer {
+        padding: 2rem 1rem;
+    }
+}
+/* Hamburger Button for Mobile */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Mobile & Tablet Menu */
+.nav-links {
+    display: flex;
+}
+
+
+/* Tablet view */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+       /* Drawer Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #d54714;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    display: none; /* Hide by default */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.nav-links.visible {
+    display: flex; /* Show when toggled */
+}
+
+.nav-links a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+/* Hamburger button */
+.hamburger {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #f4f4f4;
+    cursor: pointer;
+    z-index: 1001; /* To make sure it's above the menu */
+}
+
+
+
+}
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    .circle-frame {
+        width: 120px;
+        height: 120px;
+    }
+    .service {
+        max-width: 280px;
+    }
+
+
+/* Mobile view */
+@media (max-width: 480px) {
+    .hero {
+        padding: 1rem;
+        height: 80vh;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .get-started {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+    .about, .services, .contact {
+        padding: 2rem 1rem;
+    }
+    .circle-frame {
+        width: 100px;
+        height: 100px;
+    }
+    .service h3 {
+        font-size: 1.2rem;
+    }
+    .service p {
+        font-size: 0.9rem;
+    }
+    form input, form textarea {
+        max-width: 100%;
+    }
+    .footer {
+        padding: 1rem;
+    }
+    .footer p {
+        font-size: 0.9rem;
+    }
+}
